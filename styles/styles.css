@@ -1,6 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+
+
+@font-face {
+    font-family: 'HelveticaNeueLT Com 45 Lt';
+    src: url('/fonts/HelveticaNeueLTCom-Lt.eot');
+    src: url('/fonts/HelveticaNeueLTCom-Lt.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/HelveticaNeueLTCom-Lt.woff2') format('woff2'),
+        url('/fonts/HelveticaNeueLTCom-Lt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLT Com 65 Md';
+    src: url('/fonts/HelveticaNeueLTCom-Md.eot');
+    src: url('/fonts/HelveticaNeueLTCom-Md.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/HelveticaNeueLTCom-Md.woff2') format('woff2'),
+        url('/fonts/HelveticaNeueLTCom-Md.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+
 
 
 body {
@@ -13,21 +42,22 @@ body {
     "hero"
     "main"
     "footer";
-    font-family: 'Rubik', serif;
+    font-family: 'HelveticaNeueLT Com 45 Lt';
 }
 
 
 h1,h2 {
     margin:0;
     padding: 0;
-    font-family: 'Lora', serif;
+    font-family: 'HelveticaNeueLT Com 45 Lt';
     letter-spacing: 0.2rem;
 }
 
 h3{
-    font-family: 'Lora', serif;
-    ;
+    font-family: 'HelveticaNeueLT Com 45 Lt';
+    letter-spacing: 0.1rem;
 }
+
 
 
 /*--------------------------------------------------------------
@@ -36,7 +66,6 @@ h3{
 
 #header{
     position: fixed;
-    overflow: hidden;
     top:0;
     width: 100%;
     grid-area: header;
@@ -46,7 +75,7 @@ h3{
     align-items: center;
     background-color: rgb(0, 0, 0,0.5);
     margin: 0;
-    z-index: 999;
+    z-index: 10;
 
     /* background: transparent; */
 }
@@ -60,9 +89,10 @@ h3{
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
+    position: relative;
 }
 
-#navbar ul{
+#navbar .navbar-list{
     display: flex;
     flex-direction: row;
     list-style-type: none;
@@ -71,28 +101,53 @@ h3{
     padding: 0;
 }
 
-#navbar ul li{
+#navbar .navbar-list > li{
     display: inline-block;
     padding: 1em;
     font-size: 1.1rem;
 }
 
-#navbar ul:last-child{
+#navbar .navbar-list:last-child{
     margin-right: 2em;
 } 
 
-#navbar ul li a:hover{
+#navbar .navbar-list > li a:hover{
     background-color: white;
     color:black;
     transition: all 0.5s;
 
 }
 
-#navbar ul li a{
+#navbar .navbar-list > li > a{
     color: white;
     text-decoration: none;
     padding: 1em;
 }
+
+
+/* Dropdown list Navbar project  */
+
+.dropdown-list{
+    position: absolute;
+    top:3.17em;
+    background: rgb(0, 0, 0,0.5);
+    list-style-type: none;
+    padding: 0;
+    display: none;
+}
+
+
+.dropdown-list li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding:1em;
+}
+
+.nav-dropdown:hover .dropdown-list{
+    display: block;
+}
+
 
 
 /**
@@ -157,7 +212,7 @@ h3{
 #hero h1,h2 {
     color:white;
     z-index: 2;
-    font-family: 'Mate SC', serif;
+    font-family: 'HelveticaNeueLT Com 45 Lt', serif;
     padding: 0.5em;
 }
 
@@ -269,6 +324,7 @@ main {
 #my-projects{
     grid-area: section-1;
     background-color: white;
+    font-family: 'HelveticaNeueLT Com 65 Md';
 }
 
 #my-projects h2{
@@ -355,6 +411,7 @@ main {
     border-radius: 50%;
     width: 10rem;
     object-fit: contain;
+    margin-right: 1.5em;
 
 
 }
@@ -436,6 +493,7 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    font-family: 'HelveticaNeueLT Com 65 Md';
 }
 
 .skill-list ul{
@@ -446,18 +504,67 @@ main {
     margin-bottom: 0;
 }
 
-.skill-list ul li{
+.skill-list > ul > li{
     padding: 1em 4em 1em 4em;
     list-style: none;
     background: white;
     color: black;
-    margin: 1em;
+    margin-bottom: 1em;
     border-radius: 0.7rem;
+    cursor: pointer;
+}
+
+.skill-list > ul > li:hover{
+    opacity: .85;
+    
+
+}
+
+.skill-list > ul > li::after{
+    content: '+';
+    float: right;
+    padding-right: 0em;
+    color: black;
+    font-size: 2rem;
+    margin-left: 2em;
+    margin-top: -0.3em;
+
+
+}
+
+.skills-content{
+    margin-top: -1em;
+    background-color: white;
+    color: black;
+    border-radius: 0.7rem;
+    padding: 1em;
+    margin-bottom: 1em;
+    display: none;
+    
+}
+
+.skills-content li,ul {
+    list-style:disc;
+    padding: 0.2em;
+}
+
+
+
+.quote{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-left: 5em;
+    margin-right: 5em;
 }
 
 
 .skill-button{
+    display: flex;
+    justify-content: center;
     margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .skill-button img{
