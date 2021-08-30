@@ -551,12 +551,14 @@ main {
 
 
 .quote{
+    font-family: 'HelveticaNeueLT Com 65 Md';
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
     margin-left: 5em;
     margin-right: 5em;
+    
 }
 
 
