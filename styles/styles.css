@@ -343,11 +343,20 @@ main {
 .project-img-container{
     overflow: hidden
 }
+
+
+.project-img-container img{
+    object-fit: scale-down;
+}
+
+
+
 .project-img-container img:hover{
     transform: scale(1.2);
     transition: transform 0.5s;
     cursor: pointer;
 }
+
 
 .project-description-container{
     background-color: white;
