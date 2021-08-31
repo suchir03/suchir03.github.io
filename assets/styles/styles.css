@@ -5,10 +5,10 @@
 
 @font-face {
     font-family: 'HelveticaNeueLT Com 45 Lt';
-    src: url('/fonts/HelveticaNeueLTCom-Lt.eot');
-    src: url('/fonts/HelveticaNeueLTCom-Lt.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/HelveticaNeueLTCom-Lt.woff2') format('woff2'),
-        url('/fonts/HelveticaNeueLTCom-Lt.woff') format('woff');
+    src: url('/assets/fonts/HelveticaNeueLTCom-Lt.eot');
+    src: url('/assets/fonts/HelveticaNeueLTCom-Lt.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/HelveticaNeueLTCom-Lt.woff2') format('woff2'),
+        url('/assets/fonts/HelveticaNeueLTCom-Lt.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -16,19 +16,14 @@
 
 @font-face {
     font-family: 'HelveticaNeueLT Com 65 Md';
-    src: url('/fonts/HelveticaNeueLTCom-Md.eot');
-    src: url('/fonts/HelveticaNeueLTCom-Md.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/HelveticaNeueLTCom-Md.woff2') format('woff2'),
-        url('/fonts/HelveticaNeueLTCom-Md.woff') format('woff');
+    src: url('/assets/fonts/HelveticaNeueLTCom-Md.eot');
+    src: url('/assets/fonts/HelveticaNeueLTCom-Md.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/HelveticaNeueLTCom-Md.woff2') format('woff2'),
+        url('/assets/fonts/HelveticaNeueLTCom-Md.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
-
-
-
-
-
 
 
 
@@ -129,7 +124,7 @@ h3{
 
 .dropdown-list{
     position: absolute;
-    top:3.17em;
+    top:3.2em;
     background: rgb(0, 0, 0,0.5);
     list-style-type: none;
     padding: 0;
@@ -185,7 +180,7 @@ h3{
     grid-area: hero;
     width: 100%;
     height: 100vh;
-    background: url("/images/hero.png") top left;
+    background: url("/assets/images/hero.png") top left;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -194,7 +189,6 @@ h3{
     align-items: center;
     justify-content: center;
     z-index: 1
-  
     }
 
 #hero::before {
@@ -218,9 +212,11 @@ h3{
 
 #hero h1{
     font-size: 5rem;
+    font-weight: 100;
 }
 #hero h2{
     font-size: 2rem;
+    font-weight: 100;
 }
 
 #hero img{
@@ -685,11 +681,11 @@ main {
 # Footer
 --------------------------------------------------------------*/
 
-footer{
+footer,.footer{
     grid-area: footer;
     min-height: 10rem;
     background: black;
-    color: white;
+    color: white; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -705,3 +701,95 @@ footer{
 .copyright a, a:hover {
     text-decoration: none;
 }
+
+
+
+/*--------------------------------------------------------------
+# RESUME HTML
+--------------------------------------------------------------*/
+.resume-main{
+    margin: 7em 2em 2em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+
+.resume{
+    font-family: 'HelveticaNeueLT Com 65 Md';
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2em 0 2em 0;
+    max-width: 50rem;
+}
+
+.resume h2{
+    color: black;
+    padding: 0;
+}
+
+.resume-sections{
+    margin-top: 1em;
+    background-color: #f5f5f5;
+    padding: 1em;
+    border-radius: 1rem;
+}
+
+.resume-sections .section-content{
+    
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid black;
+    position: relative;
+    font-weight: 200 !important;
+}
+
+
+.resume-sections .section-content::before {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    left: -0.65rem;
+    top: 0;
+    background: #fff;
+    border: 2px solid #82909c;
+  }
+
+  .section-content ul > li{
+      padding: 0.5em;
+  }
+
+  .section-content > div{
+      padding: 0.1em;
+  }
+
+  .resume-main >h3{
+      margin-top: 2em;
+  }
+
+  .resume-main .key-skills{
+      margin-top: 2em;
+      margin-bottom: 2em;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 60rem;
+
+  }
+
+  .resume-main .key-skills span{
+      margin: 0.2em;
+      padding: 1em;
+      background-color: #0078ff;
+      color: white !important;
+      font-family:'HelveticaNeueLT Com 65 Md';
+      border-radius: 0.5rem;
+
+  }
