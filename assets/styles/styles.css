@@ -193,7 +193,7 @@ h3{
 
 #hero::before {
     content: "";
-    background: rgba(5, 0, 0, 0.5);
+    background: rgba(5, 0, 0, 0.75);
     position: absolute;
     bottom: 0;
     top: 0;
@@ -237,47 +237,51 @@ h3{
     100% {
       transform: translateY(-5px);
     }
-  }
+}
+
+
   
-  @keyframes up-down {
-    0% {
-      transform: translateY(5px);
-    }
-    100% {
-      transform: translateY(-5px);
-    }
-  }
+@keyframes up-down {
+0% {
+    transform: translateY(5px);
+}
+100% {
+    transform: translateY(-5px);
+}
+}
 
 
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 
-  .back-to-top-button img{
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-    z-index: 0;
-    width: 40px;
-    border-radius: 50%;
-    object-fit: contain;
-    background: white;
-    border: 1px solid white;
+.back-to-top-button img{
+position: fixed;
+right: 15px;
+bottom: 15px;
+z-index: 0;
+width: 40px;
+border-radius: 50%;
+object-fit: contain;
+background: white;
+border: 1px solid white;
 }
-  .back-to-top-button img:hover {
+.back-to-top-button img:hover {
 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
   
 
 
 /*--------------------------------------------------------------
 # Main Section
 --------------------------------------------------------------*/
-
-
-main {
+main{
     grid-area: main;
+}
+
+.sections {
+    
     display: grid;
     grid-template-rows: repeat(3,auto);
     grid-template-areas: 
@@ -715,8 +719,6 @@ footer,.footer{
     
 }
 
-
-
 .resume{
     font-family: 'HelveticaNeueLT Com 65 Md';
     color: black;
@@ -761,35 +763,85 @@ footer,.footer{
     border: 2px solid #82909c;
   }
 
-  .section-content ul > li{
-      padding: 0.5em;
-  }
+.section-content ul > li{
+    padding: 0.5em;
+}
 
-  .section-content > div{
-      padding: 0.1em;
-  }
+.section-content > div{
+    padding: 0.1em;
+}
 
-  .resume-main >h3{
-      margin-top: 2em;
-  }
+.resume-main >h3{
+    margin-top: 2em;
+}
 
-  .resume-main .key-skills{
-      margin-top: 2em;
-      margin-bottom: 2em;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      max-width: 60rem;
+.resume-main a{
+color: black;
+}
 
-  }
+.resume-main .key-skills{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 60rem;
 
-  .resume-main .key-skills span{
-      margin: 0.2em;
-      padding: 1em;
-      background-color: #0078ff;
-      color: white !important;
-      font-family:'HelveticaNeueLT Com 65 Md';
-      border-radius: 0.5rem;
+}
 
-  }
+.resume-main .key-skills span{
+    margin: 0.2em;
+    padding: 1em;
+    background-color: #0078ff;
+    color: white !important;
+    font-family:'HelveticaNeueLT Com 65 Md';
+    border-radius: 0.5rem;
+
+}
+
+
+/*--------------------------------------------------------------
+# Project html
+--------------------------------------------------------------*/
+.project-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 7em 2em 2em 2em;
+    
+}
+
+article{
+    max-width: 60rem;
+    margin-top: 3em;
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: #525252;
+    font-size: 1.2rem;
+    background-color: #f5f5f5;
+    padding: 2em;
+    border-radius: 3rem;
+
+}
+
+article p{
+    text-indent: 3rem;
+}
+
+article li{
+    margin-left: 4em ;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+}
+
+figure img{
+    max-width: 50rem;
+}
+/*--------------------------------------------------------------
+# Project html
+--------------------------------------------------------------*/
