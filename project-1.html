@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/styles/styles.css">
-    <title>Document</title>
+    <title>Suchir | Portfolio</title>
 </head>
 <body>
     <header id="header">
@@ -17,58 +17,39 @@
                 <li><a href="/index.html">Home</a></li>
                 <li class="nav-dropdown"><a href="#my-projects">Projects &#x25BC</a>
                     <ul class="dropdown-list">
-                        <li><a href="#">Project 1</a></li>
-                        <li><a href="#">Project 2</a></li>
-                        <li><a href="#">Project 3</a></li>
+                        <li><a href="#">Lake Mungo - Time series analysis</a></li>
+                        <li><a href="/project-2.html">Land-use Planning</a></li>
+                        <li><a href="/project-3.html">Personal Website</a></li>
                     </ul>        
                 </li>
                 <li><a href="/resume.html">Resume</a></li>
-                <li><a href="#blog"> Blog</a></li>
+                <!-- <li><a href="#blog"> Blog</a></li> -->
                 <!-- <li><a href="#">Contact</a></li> -->
             </ul>
         </nav>
     </header>
-    <main class="project-article">
-        <h1>Land-use Planning Kowen region, Canberra</h1>
+    <main  class="project-article">
+        <h1>Lake Mungo - Time Series Analysis </h1>
         <article>
+            <h3>Background</h3>
+            <p>Lake Mungo is a dry lake in the semi-arid environment of southeast Australia located in New South Wales (NSW). This region contains some of the earliest evidence of Homo sapiens  of Africa, establishing that humans had dispersed as far as Australia by 42,000 years ago. Lake Mungo is a site of great importance in the world of archaeology as it holds a fascinating history of quaternary climate change and early human interaction with Australian ecology. Until recently, before the findings of <a href='https://www.nationalgeographic.com/science/article/childs-grave-is-the-oldest-human-burial-found-in-africa'>child’s burial found in Africa</a>, Lake Mungo is best known for its world's first human burial and first recorded cremation, famously known as Mungo Man (Mungo I) and Mungo Woman (Mungo III). The lake is dried out since 19,000 - 22,000 years and the environmental conditions since then has created beautiful crescent shaped sand dunes on the eastern banks of the lake.</p>
+            <h3>A prelude to the Research</h3>
+            <p>A series of crescent-shaped sand dunes called lunettes developed over tens of thousands of years have eroded significantly in the recent past and have exposed various archaeological artefacts, allowing scientists and researchers to find archaeological artefacts and interpret human environmental interactions. The erosion poses a threat in conserving the history of indigenous Australians. Hence, recording and protecting this famous archaeologically significant site will be an educational asset, economically valuable in tourism and help in understanding the changing landscape of Lake Mungo.</p>
+            <p>After doing extensive literature survey, for this research thestructure from motion technique (SfM-MVS) and Unmanned Aerial Vehicle (UAV) is employed to build a 2.5D digital elevation model and carry out spatiotemporal analysis for the Joulni site at Lake Mungo.</p>
+            <p>The research is aimed to quantify the extent and the rate of denudation of Joulni, Lake Mungo, a World Heritage site in New South Wales, Australia by making use of SfM-MVS techniques coupled with change detection algorithms and images derived from UAV.</p>
+            <h3>Implementation</h3>
+            <p>Topographic surveying is carried out from 2015 to 2018 using SenseFly eBee RTK UAV integrated with GPS receiver and Sony WX220 camera. The fixed wing aircraft took approximately 1000 overlapping images for each survey year,  a process to create a 3D point cloud model using SfM-MVS techniques. In this research, both Agisoft Photoscan and Pix4D software packages were used to create the 3D model. A comparison of various software packages is done and covered in the research thesis.</p>
             <figure>
-                <img src="/assets/images/mola.png" alt="Land-use planning model">
-                <figcaption>Figure shows the Multi-Objective land-use allocation of Kowen region, Canberra</figcaption>
+                <img src="/assets/images/mungo-image-2.png" alt="Lake Mungo dffirent algorithm results">
+                <figcaption>Difference of morphology between 2015 to 2018. The change is calculated using three different algorithms.</figcaption>
             </figure>
-            <p>The project aims to evaluate Kowen region of Australian Capital Territory (ACT) to develop residential cluster aligned with ACT’s infrastructure plan 2011-2021. The Kowen region is the northern east part of ACT, and the study site encompasses the Queanbeyan town in the west. It spans approximately 516km2. Molonglo river cuts across the study area. </p>
-            <p>The report is designed and generated for a hypothetical industry to provide a proposal to the ACT government. The residential cluster development is evaluated based on the following factors:</p>
-            <ul>
-                <li>Passive solar design for buildings</li>
-                <li>Agricultural land-use options in the region</li>
-                <li>Forestry for commercial value</li>
-                <li>Conservation of biodiversity</li>
-                <li>Floods and fire risk</li>
-                <li>Maximise financial return on the project for Sunshine Industries</li>
-            </ul>
-            <p>Kowen region has varied topography and consists of forests, vegetation types, indigenous significance sites, river, streams, and agricultural lands and nearby Queanbeyan town. Hence, GIS analysis is performed considering various factors, models and land-uses. The study sight is classified for following land uses:</p>
-            <ul>
-                <li>Building infrastructure</li>
-                <li>Conservation of biodiversity</li>
-                <li>Agriculture</li>
-                <li>Economic value from forestry</li>
-                <li>Site of indigenous significance</li>
-            </ul>
-            <p>The study is based on multi-criterion evaluation of land-use using various core datasets and the results are discussed in the context of financial viability of infrastructure development at the study. Following data sets are used in Land-use planning - Landsat Imagery, SRTM derived DEM, OpenStreetMap Data, ASDST, Soil Landscape, State boundary of ACT.</p>
-            <p>The evaluation based on Multi-Objective Land Allocation suggests that: </p>
-            <ul>
-                <li>44% of the area is to be conserved to maintain biodiversity</li>
-                <li>30% of the area can be used for infrastructure development</li>
-                <li>12% of the area to be used for agriculture</li>
-                <li>13% of the area for commercial use of forestry</li>
-                <li>1% to be conserved for indigenous significance</li>
-            </ul>
-            <p>The southern and eastern region of the study area is most suitable for infrastructure development. The area covering the mountainous terrain and most of the northwestern part is to be conserved.</p>
-            <p>The results provided should be interpreted as exploratory and some of the limitations of the project include:</p>
-            <ul>
-                <li>Various factors affecting building suitability and agriculture like erosion are not considered</li>
-                <li>Systematic errors in core data sets are not considered</li>
-                <li>Artefacts persist after filtering incorrect stream locations</li>
-            </ul>
+            <p>A high-resolution (0.05m) 2.5-dimensional Digital Elevation Model (DEM) is generated from the three-dimensional point cloud data. ArcGIS and Global Mapper is used extensively to handle point cloud data and generate the required DEM using standard Triangular Irregular Network (TIN) algorithm. To achieve higher accuracy the errors resulting from camera images are filtered using Kernel Density Estimation (KDE). LiDAR and SfM-MVS derived DEMs are also compared with each other in this study.</p>
+            <p>Finally, each interval of the epochs over the three years is differenced using DoD, LS3D and ArcGIS algorithms and the resulting elevation changes are used to analyse the erosion and deposition of sediments at Joulni section of Lake Mungo.</p>
+            <figure>
+                <img src="/assets/images/mungo-image.png" alt="Lanke Mungo enhanced color image">
+                <figcaption>Ortho photos from 2015 and 2018 of a location shows how the gully is evolving. The enhanced colour image shown below showcases the difference between the two epochs.</figcaption>
+            </figure>
+            <p>The study shows that some regions of the lunettes having high denudation or aggregation have reliable estimates. However, changes less than ±16cm is hard to determine and quantify. With careful elevation modelling and consideration of spatial errors, SfM-MVS can successfully be used as a low-cost method in topographic surveying in comparison to LiDAR.</p>
         </article>
     </main>
     <footer class='footer'>
